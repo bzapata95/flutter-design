@@ -9,10 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: BasicDesignScreen(),
+      initialRoute: 'basic_design',
+      routes: {
+        'basic_design': (_) => const BasicDesignScreen(),
+      },
     );
   }
 }
